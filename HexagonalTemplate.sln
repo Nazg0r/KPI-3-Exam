@@ -17,6 +17,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hexagonal.Adapter.InMemory"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hexagonal.Adapter.Postgres", "src\Infrastructure\Hexagonal.Adapter.Postgres\Hexagonal.Adapter.Postgres.csproj", "{111D4AC1-837E-4643-85E4-C39DAAB7CC91}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hexagonal.Adapter.DetailedNotification", "src\Infrastructure\Hexagonal.Adapter.DetailedNotification\Hexagonal.Adapter.DetailedNotification.csproj", "{79677722-7126-48FE-8B2B-5ED249D581AA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hexagonal.Adapter.SimpleNotification", "src\Infrastructure\Hexagonal.Adapter.SimpleNotification\Hexagonal.Adapter.SimpleNotification.csproj", "{42943356-59E4-46A4-93FA-8E3EB4C62AC4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -42,6 +46,14 @@ Global
 		{111D4AC1-837E-4643-85E4-C39DAAB7CC91}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{111D4AC1-837E-4643-85E4-C39DAAB7CC91}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{111D4AC1-837E-4643-85E4-C39DAAB7CC91}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79677722-7126-48FE-8B2B-5ED249D581AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79677722-7126-48FE-8B2B-5ED249D581AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79677722-7126-48FE-8B2B-5ED249D581AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79677722-7126-48FE-8B2B-5ED249D581AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42943356-59E4-46A4-93FA-8E3EB4C62AC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42943356-59E4-46A4-93FA-8E3EB4C62AC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42943356-59E4-46A4-93FA-8E3EB4C62AC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42943356-59E4-46A4-93FA-8E3EB4C62AC4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{FF754DC8-EAE6-4054-B721-94ABA4DA3B17} = {81C4C08E-053A-40E0-AEA3-C31525E27A99}
@@ -50,5 +62,7 @@ Global
 		{8D4B9B2A-F64E-4E33-8747-4A3193AD9E57} = {81C4C08E-053A-40E0-AEA3-C31525E27A99}
 		{91A16A49-4083-4CD5-871C-1707D094CB4B} = {8D4B9B2A-F64E-4E33-8747-4A3193AD9E57}
 		{111D4AC1-837E-4643-85E4-C39DAAB7CC91} = {8D4B9B2A-F64E-4E33-8747-4A3193AD9E57}
+		{79677722-7126-48FE-8B2B-5ED249D581AA} = {8D4B9B2A-F64E-4E33-8747-4A3193AD9E57}
+		{42943356-59E4-46A4-93FA-8E3EB4C62AC4} = {8D4B9B2A-F64E-4E33-8747-4A3193AD9E57}
 	EndGlobalSection
 EndGlobal
