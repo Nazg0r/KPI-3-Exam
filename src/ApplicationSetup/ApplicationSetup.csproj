@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Infrastructure\Hexagonal.Adapter.Auth\Hexagonal.Adapter.Auth.csproj" />
+    <ProjectReference Include="..\Infrastructure\Hexagonal.Adapter.DetailedNotification\Hexagonal.Adapter.DetailedNotification.csproj" />
+    <ProjectReference Include="..\Infrastructure\Hexagonal.Adapter.InMemory\Hexagonal.Adapter.InMemory.csproj" />
+    <ProjectReference Include="..\Infrastructure\Hexagonal.Adapter.Postgres\Hexagonal.Adapter.Postgres.csproj" />
+    <ProjectReference Include="..\Infrastructure\Hexagonal.Adapter.SimpleNotification\Hexagonal.Adapter.SimpleNotification.csproj" />
+    <ProjectReference Include="..\UI\Hexagonal.Adapter.Rest\Hexagonal.Adapter.Rest.csproj" />
+  </ItemGroup>
+
+</Project>
