@@ -7,12 +7,13 @@ using MediatR;
 namespace Hexagonal.Application.Handlers.Commands
 {
 	internal class UpdateUserCredentialsCommandHandler(
-		IUserRepository userRepository)
+		IUserReadRepository userReadRepository,
+		IUserWriteRepository userWriteRepository)
 		: IRequestHandler<UpdateUserCredentialsCommand, User>
 	{
 		public async Task<User> Handle(UpdateUserCredentialsCommand command, CancellationToken cancellationToken)
 		{
-			var user = await userRepository.GetUserByEmailAsync(command.Email, cancellationToken);
+			var user = await userReadRepository.GetUserByEmailAsync(command.Email, cancellationToken);
 			if (user is null)
 				throw new UserNotFound($"User with email: {command.Email} not found");
 
@@ -20,7 +21,7 @@ namespace Hexagonal.Application.Handlers.Commands
 			user.Surname = command.Surname;
 			user.UserName = command.UserName;
 
-			await userRepository.UpdateUserCredentialsAsync(user, cancellationToken);
+			await userWriteRepository.UpdateUserCredentialsAsync(user, cancellationToken);
 
 			return user;
 		}

@@ -17,6 +17,7 @@ public static class DependencyInjection
 			options.UseNpgsql(builder.Configuration.GetConnectionString("Postgres"));
 		});
 
-		builder.Services.AddScoped<IUserRepository, UserRepository>();
+		builder.Services.AddScoped<IUserReadRepository, UserRepository>();
+		builder.Services.AddScoped<IUserWriteRepository, UserRepository>();
 	}
 }

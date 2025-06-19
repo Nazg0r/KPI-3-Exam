@@ -5,7 +5,7 @@ using Hexagonal.Domain.Entities;
 namespace Hexagonal.Adapter.Postgres.Repositories
 {
 	public class UserRepository(UserDbContext dbContext)
-		: IUserRepository
+		: IUserReadRepository, IUserWriteRepository
 	{
 		public Task<User?> GetUserByIdAsync(string id, CancellationToken cancellationToken)
 		{

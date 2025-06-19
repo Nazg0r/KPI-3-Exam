@@ -7,7 +7,7 @@ using MediatR;
 namespace Hexagonal.Application.Handlers.Queries
 {
 	internal class GetUserByIdQueryHandler(
-		IUserRepository userRepository)
+		IUserReadRepository userRepository)
 		: IRequestHandler<GetUserByIdQuery, User>
 	{
 		public async Task<User> Handle(GetUserByIdQuery query, CancellationToken cancellationToken)

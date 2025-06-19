@@ -8,7 +8,7 @@ using MediatR;
 namespace Hexagonal.Application.Handlers.Commands
 {
 	public class CreateUserCommandHandler(
-		IUserRepository userRepository,
+		IUserWriteRepository userRepository,
 		IAuthService authService,
 		INotificationService notificationService)
 		: IRequestHandler<CreateUserCommand, User>

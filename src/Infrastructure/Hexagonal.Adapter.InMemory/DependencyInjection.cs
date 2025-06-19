@@ -16,7 +16,8 @@ namespace Hexagonal.Adapter.InMemory
 				options.UseInMemoryDatabase("HexagonalInMemoryDb");
 			});
 
-			builder.Services.AddScoped<IUserRepository, UserRepository>();
+			builder.Services.AddScoped<IUserReadRepository, UserRepository>();
+			builder.Services.AddScoped<IUserWriteRepository, UserRepository>();
 		}
 	}
 }

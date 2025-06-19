@@ -5,7 +5,7 @@ using MediatR;
 namespace Hexagonal.Application.Handlers.Commands
 {
 	public class DeleteUserCommandHandler(
-		IUserRepository userRepository)
+		IUserWriteRepository userRepository)
 		: IRequestHandler<DeleteUserCommand, Unit>
 	{
 		public async Task<Unit> Handle(DeleteUserCommand command, CancellationToken cancellationToken)

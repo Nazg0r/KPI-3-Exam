@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 namespace Hexagonal.Adapter.InMemory.Repositories
 {
 	public class UserRepository(UserDbContext dbContext)
-		: IUserRepository
+		: IUserReadRepository, IUserWriteRepository
 	{
 		public async Task<User?> GetUserByIdAsync(string id, CancellationToken cancellationToken) =>
 			await dbContext.Users.FindAsync(id);
