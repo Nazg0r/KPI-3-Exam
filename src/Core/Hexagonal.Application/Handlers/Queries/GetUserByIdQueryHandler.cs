@@ -12,7 +12,7 @@ namespace Hexagonal.Application.Handlers.Queries
 	{
 		public async Task<User> Handle(GetUserByIdQuery query, CancellationToken cancellationToken)
 		{
-			var user = await userRepository.GetUserByEmailAsync(query.Id, cancellationToken);
+			var user = await userRepository.GetUserByIdAsync(query.Id, cancellationToken);
 			if (user is null)
 				throw new UserNotFound($"User with id: {query.Id} not found");
 

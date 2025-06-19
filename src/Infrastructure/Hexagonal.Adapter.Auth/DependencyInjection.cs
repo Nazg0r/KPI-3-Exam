@@ -10,7 +10,7 @@ public static class DependencyInjection
 {
 	public static void AddAuthAdapter(this IHostApplicationBuilder builder)
 	{
-		builder.Services.Configure<UserValidationOptions>(builder.Configuration.GetSection("Validation"));
+		builder.Services.AddSingleton(new UserValidationOptions());
 		builder.Services.AddScoped<IAuthService, AuthService>();
 	}
 }
