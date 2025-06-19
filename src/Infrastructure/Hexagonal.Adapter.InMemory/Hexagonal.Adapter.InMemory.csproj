@@ -7,12 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Hexagonal.Domain\Hexagonal.Domain.csproj" />
+    <PackageReference Include="EntityFramework" Version="6.5.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="9.0.6" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="MediatR" Version="12.5.0" />
-    <PackageReference Include="Microsoft.Extensions.Hosting" Version="9.0.6" />
+    <ProjectReference Include="..\..\Core\Hexagonal.Application\Hexagonal.Application.csproj" />
   </ItemGroup>
 
 </Project>
